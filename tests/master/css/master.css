@@ -1,11 +1,11 @@
 
-/* base styles for the test page 
+/* base styles for the test page
 ------------------------------------------------------------------------------------ */
 
 @import url("common.css");
 
 
-/* import syntax checks 
+/* import syntax checks
 ------------------------------------------------------------------------------------ */
 
 @import url("import-url-quoted-double.css");
@@ -15,9 +15,9 @@
 @import "import-quoted-single.css";
 @import url("nested/import-url-relative-path.css");
 
-/* 
- * The following urls will be specific to your own server configuration and will fail  
- * if used "out of the box". To test root-relative and fully qualifed url's you will 
+/*
+ * The following urls will be specific to your own server configuration and will fail
+ * if used "out of the box". To test root-relative and fully qualifed url's you will
  * need to adjust the paths below:
  */
 
@@ -50,13 +50,13 @@ body {
 }
 
 #url-remote {
-	background: #c00 url("https://github.com/keithclark/selectivizr/raw/master/tests/master/css/nested/test.png");
+	background: #c00 url("https://raw.githubusercontent.com/toshgoodson/selectivizr/master/tests/master/css/nested/test.png");
 }
 
 #url-htc {
 	behavior: url(htc/test.htc);
 }
-											
+
 /* pseudo-class tests
 ------------------------------------------------------------------------------------ */
 
@@ -68,7 +68,7 @@ html:root #root
 #empty span { margin-top:-24px; }
 
 .empty:empty,
-.not-empty:not(:empty)					
+.not-empty:not(:empty)
 											{ background: #0c0 }
 
 #first-child:first-child,
@@ -83,7 +83,7 @@ html:root #root
 #not-nth-last-child:not(:nth-last-child(4)),
 #not-only-child:not(:only-child)
 											{ background: #0c0 }
-																				
+
 #first-of-type:first-of-type,
 #not-first-of-type:not(:first-of-type),
 #last-of-type:last-of-type,
@@ -100,13 +100,13 @@ html:root #root
 
 /* UI pseudo-class tests
 ------------------------------------------------------------------------------------ */
-																			
+
 #hover:hover,
 #not-hover:not(:hover)
-											{ background: #0c0 } 
+											{ background: #0c0 }
 
-/* IE6 doesn't support the '+' combinator so these will always fail so they have been 
-split from the rules declared above. Need to find a way to get these tests running 
+/* IE6 doesn't support the '+' combinator so these will always fail so they have been
+split from the rules declared above. Need to find a way to get these tests running
 without using the '+' combinator so they run in IE6 */
 
 #checked:checked+span,
@@ -120,7 +120,7 @@ without using the '+' combinator so they run in IE6 */
 
 /* attribute selector tests
 ------------------------------------------------------------------------------------ */
-																
+
 #attr-whitespace-list[rel~="b2"],
 #attr-whitespace-list2[rel~="b2"],
 #attr-hyphen-list[rel|="a1"],
@@ -137,11 +137,11 @@ without using the '+' combinator so they run in IE6 */
 #attr-endswith2[rel$=""] td,
 #attr-contains2[rel*=""] td
 											{ background: #c00 }
-											
+
 
 /* url syntax tests
 ------------------------------------------------------------------------------------ */
-											
+
 #url-quoted-double { background: url("nested/test.png")}
 #url-quoted-single { background: url('nested/test.png')}
 #url-unquoted { background: url(nested/test.png)}
