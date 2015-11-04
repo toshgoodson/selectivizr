@@ -37,10 +37,10 @@
 				"2.8.2": "http://yui.yahooapis.com/combo?2.8.2r1/build/yahoo/yahoo-min.js&2.8.2r1/build/dom/dom-min.js&2.8.2r1/build/selector/selector-min.js"
 			}
 		};
-		
+
 		// if no test engine is been specified, use this one as a default:
 		var defaultEngine = engines["NWMatcher"]["1.2.3"];
-		
+
 	</script>
 	<link rel="stylesheet" href="css/master.css" >
 	<script src="js/test.js"></script>
@@ -50,19 +50,37 @@
 	<h1>Selectivizr test suite</h1>
 
 	<div id="tests">
-	
+
 		<form method="get">
 			<p>
 				<label>Selector Engine: <select id="library" name="library"><option value="">No engine</option></select></label>
 				<input type="submit" value="Reload">
 			</p>
 		</form>
-		
+
+		<h2>selectivizr test initialization tests</h2>
+		<p>This group of tests are designed to check if this testing suite has initialized correctly. These should always pass.</p>
+
+		<h3>Browser tests</h3>
+		<table border="1" width="100%">
+			<tr id="browser-internet-explorer">
+				<td>Internet Explorer</td>
+				<td>Check if browser is supported version of Internet Explorer</td>
+			</tr>
+		</table>
+		<h3>Engine tests</h3>
+		<table border="1" width="100%">
+			<tr id="engine-loaded">
+				<td>Selector Engine</td>
+				<td>Check if the chosen selector engine has loaded</td>
+			</tr>
+		</table>
+
 		<h2>selectivizr parsing / implementation tests</h2>
 		<p>This group of tests have been designed to designed to check various internal functions to ensure that
 			selectivizr is correctly parsing style sheet content. The results of these tests are NOT dependant on
 			the choice of selector library and should therefore always pass.</p>
-			
+
 		<h3>@import syntax tests</h3>
 		<table border="1" width="100%">
 			<tr id="import-url-quoted-double">
@@ -162,7 +180,7 @@
 
 		<h2>Selector engine tests</h2>
 		<p>These tests are designed to identify problems or unsupported features with specific selector engines.</p>
-			
+
 		<h3>Attribute selectors</h3>
 		<table border="1" width="100%" id="attr">
 			<tr id="attr-whitespace-list" rel="a1 b2 c3">
@@ -202,9 +220,9 @@
 			<tr id="attr-contains2" rel="">
 				<td>E[foo*=""]</td>
 				<td>Check library catches native IE selector bug when testing against empty attribute value</td>
-			</tr>	
+			</tr>
 		</table>
-		
+
 		<h3>UI pseudo-class tests</h3>
 		<table border="1" width="100%" id="ui">
 			<tr id="hover">
@@ -236,7 +254,7 @@
 			<p class="warn">Please note: :focus, :enabled, :disabled and :checked will show as failures in IE6. This
 			is an issue with the test tool, not selectivizr.</p>
 		<![endif]-->
-		
+
 		<h3>Pseudo-class tests</h3>
 		<table border="1" width="100%">
 			<tr id="root">
@@ -253,7 +271,7 @@
 			<tr>
 				<td><b class="empty"><!-- comment --></b><span>:empty (with HTML comment)</span></td>
 			</tr>
-			<!-- IE incorrectly collapses whitespace so this test will always pass 
+			<!-- IE incorrectly collapses whitespace so this test will always pass
 			<tr>
 				<td><b class="empty"> </b><span>:empty (whitespace)</span></td>
 			</tr>
@@ -306,7 +324,7 @@
 				<td>:last-child</td>
 			</tr>
 		</table>
-		
+
 		<!--<h2>xxx-of-type pseudo-class tests</h2>-->
 		<table border="1" width="100%" id="xxx-type">
 			<caption></caption>
